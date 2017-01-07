@@ -10,7 +10,8 @@ target 'DeveloperNews' do
   pod 'SwiftyJSON'
   pod 'Alamofire-Synchronous', '~> 4.0'
   pod 'XLPagerTabStrip', '~> 6.0’
-
+  pod "KRProgressHUD"
+  
   target 'DeveloperNewsTests' do
     inherit! :search_paths
     # Pods for testing

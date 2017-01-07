@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import KRProgressHUD
 
 class MainViewController: ButtonBarPagerTabStripViewController {
     
@@ -20,7 +21,9 @@ class MainViewController: ButtonBarPagerTabStripViewController {
         settingBarView()
     }
     
+   //MARK: - XLPagerTabStrip delegate
    func createViewControllers(feeds:[Dictionary<String, String>])->[UIViewController]{
+        KRProgressHUD.show()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let parseVc = ParseJsonController()
         let contents = parseVc.parseJson(feeds: feeds)
@@ -30,6 +33,7 @@ class MainViewController: ButtonBarPagerTabStripViewController {
             childVc.setInitNewsContent(number: index, newsContent: contents[index])
             return childVc
         }
+    
         return childsVcArray
     }
     

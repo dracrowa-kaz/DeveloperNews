@@ -27,18 +27,30 @@ var feeds: [Dictionary<String, String>] =
     [
         [
             "link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/top/rss",
-            "title": "top"
+            "title": "Top"
         ],
         [
             "link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/ruby/rss",
-            "title": "ruby"
+            "title": "Ruby"
         ],
         [
             "link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/ios/rss",
-            "title": "ios"
+            "title": "iOS"
+        ],
+        [
+            "link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/android/rss",
+            "title": "Android"
         ],
         [
             "link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/infrastructure/rss",
-            "title": "infrastructure"
+            "title": "Infrastructure"
         ],
+        [
+            "link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/javascript/rss",
+            "title": "Javascript"
+        ],
+        [
+            "link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/programming/rss",
+            "title": "Programming"
+        ]
 ]

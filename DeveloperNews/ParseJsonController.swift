@@ -20,7 +20,6 @@ class ParseJsonController {
     
     func parseJson(feeds:[Dictionary<String, String>])->[[newsContetntsStruct]]{
         let apiController = APIController()
-        
         var newsContentsArray = [[newsContetntsStruct]]()
         
         feeds.enumerated().forEach{ index , element in

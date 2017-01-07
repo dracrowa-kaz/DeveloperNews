@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import KRProgressHUD
 
 class ChildViewController : UIViewController , IndicatorInfoProvider {
     
@@ -27,6 +28,7 @@ class ChildViewController : UIViewController , IndicatorInfoProvider {
     
     override func viewDidLayoutSubviews() {
         createContentView(newsContents: contentStruct!)
+        KRProgressHUD.dismiss()
     }
     
    func createContentView(newsContents:[newsContetntsStruct]){
@@ -34,7 +36,7 @@ class ChildViewController : UIViewController , IndicatorInfoProvider {
         var startY = 15
         newsContents.forEach{ element in
             let view : CustomContentView =  UINib(nibName: "CustomContentView", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! CustomContentView
-            let rect : CGRect = CGRect(x: 0, y: startY , width: Int(scrollView.frame.width ) , height: viewHeight)
+            let rect : CGRect = CGRect(x: 0, y: startY , width: Int(scrollView.frame.width) , height: Int(view.frame.height))
             view.frame  = rect
             view.setContent(newsContent: element)
             startY += viewHeight
