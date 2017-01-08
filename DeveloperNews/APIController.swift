@@ -15,7 +15,6 @@ class APIController {
     func getJSON(url:String)->JSON?{
         let response = Alamofire.request(url, method: .get).responseJSON(options: .allowFragments)
         if let json = response.result.value {
-            print(json)
             return JSON(json)
         }
         

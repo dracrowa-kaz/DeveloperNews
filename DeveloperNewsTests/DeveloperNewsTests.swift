@@ -55,11 +55,15 @@ class DeveloperNewsTests: XCTestCase {
         for i in 0 ..< feeds.count{
             let parseJsonController = ParseJsonController()
             let structs = parseJsonController.parseJson(feeds: feeds)
-            for (index,element) in structs.enumerated() {
-                XCTAssertNotEqual(structs[i][index].title,"")
-                XCTAssertNotEqual(structs[i][index].publishedDate,"")
-                XCTAssertNotEqual(structs[i][index].link,"")
-                XCTAssertNotEqual(structs[i][index].contentSnippet,"")
+            print("Structs count is " + String(structs.count))
+            print(structs)
+            for (index,element) in structs[i].enumerated() {
+                print("i is " + String(i))
+                print("index is "+String(index))
+                XCTAssertNotEqual(element.title,"")
+                XCTAssertNotEqual(element.publishedDate,"")
+                XCTAssertNotEqual(element.link,"")
+                XCTAssertNotEqual(element.contentSnippet,"")
             }
         }
     }

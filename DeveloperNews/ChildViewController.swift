@@ -9,6 +9,7 @@
 import UIKit
 import XLPagerTabStrip
 import KRProgressHUD
+import SafariServices
 
 class ChildViewController : UIViewController , IndicatorInfoProvider {
     
@@ -39,10 +40,19 @@ class ChildViewController : UIViewController , IndicatorInfoProvider {
             let rect : CGRect = CGRect(x: 0, y: startY , width: Int(scrollView.frame.width) , height: Int(view.frame.height))
             view.frame  = rect
             view.setContent(newsContent: element)
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedView(_:)))
+            view.addGestureRecognizer(gesture)
             startY += viewHeight
             self.scrollView.addSubview(view)
             scrollView.contentSize =  CGSize(width: scrollView.frame.width, height: view.frame.maxY)
         }
+    }
+    
+    func tappedView(_ sender:UITapGestureRecognizer){
+        let view = sender.view as! CustomContentView
+        let Url = NSURL(string: view.link)
+        let safariViewController = SFSafariViewController(url: Url as! URL)
+        present(safariViewController, animated: false, completion: nil)
     }
     
     //MARK: - XLPagerTabStrip delegate
@@ -54,8 +64,11 @@ class ChildViewController : UIViewController , IndicatorInfoProvider {
 class CustomContentView : UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    var link: String = ""
     
     func setContent(newsContent:newsContetntsStruct){
+        self.link = newsContent.link
+        
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.black.cgColor
         self.titleLabel.text = newsContent.title
