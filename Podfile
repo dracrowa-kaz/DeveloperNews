@@ -11,7 +11,9 @@ target 'DeveloperNews' do
   pod 'Alamofire-Synchronous', '~> 4.0'
   pod 'XLPagerTabStrip', '~> 6.0’
   pod "KRProgressHUD"
-  
+  pod 'RAMAnimatedTabBarController', "~> 2.0.13"
+  pod "AlamofireXmlToObjects"
+
   target 'DeveloperNewsTests' do
     inherit! :search_paths
     # Pods for testing
@@ -19,6 +21,8 @@ target 'DeveloperNews' do
    pod 'Alamofire', '~> 4.0'
    pod 'SwiftyJSON'
    pod 'Alamofire-Synchronous', '~> 4.0'
+   pod 'RAMAnimatedTabBarController', "~> 2.0.13"
+   pod "AlamofireXmlToObjects"
   end
 
   target 'DeveloperNewsUITests' do

@@ -33,9 +33,14 @@ class DeveloperNewsTests: XCTestCase {
         }
     }
     
+    func testConvertXmlToJson(){
+        let vc = APIController()
+    }
+    
+    /*
     //MARK: - MainViewController Tests
     func testMainViewControllers(){
-        let vc = MainViewController()
+        let vc = ButtonBarPagerViewController()
         let vcArray = vc.createViewControllers(feeds: feeds)
         XCTAssertEqual(vcArray.count, feeds.count)
         XCTAssertNotNil(vcArray)
@@ -67,4 +72,5 @@ class DeveloperNewsTests: XCTestCase {
             }
         }
     }
+     */
 }

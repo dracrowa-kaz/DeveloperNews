@@ -10,6 +10,8 @@ import UIKit
 import XLPagerTabStrip
 import KRProgressHUD
 import SafariServices
+import RAMAnimatedTabBarController
+import SwiftyJSON
 
 class ChildViewController : UIViewController , IndicatorInfoProvider {
     
@@ -25,6 +27,8 @@ class ChildViewController : UIViewController , IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let jsons = JSON(feeds)
+        print(jsons)
     }
     
     override func viewDidLayoutSubviews() {
@@ -68,7 +72,6 @@ class CustomContentView : UIView {
     
     func setContent(newsContent:newsContetntsStruct){
         self.link = newsContent.link
-        
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.black.cgColor
         self.titleLabel.text = newsContent.title

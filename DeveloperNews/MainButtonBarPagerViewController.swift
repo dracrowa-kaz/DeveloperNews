@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  MainButtonBarPagerViewController.swift
 //  DeveloperNews
 //
-//  Created by 佐藤和希 on 1/4/17.
+//  Created by 佐藤和希 on 1/15/17.
 //  Copyright © 2017 kaz. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import XLPagerTabStrip
 import KRProgressHUD
 
-class MainViewController: ButtonBarPagerTabStripViewController {
+class MainButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
     
     override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         return createViewControllers(feeds: feeds)
@@ -21,19 +21,21 @@ class MainViewController: ButtonBarPagerTabStripViewController {
         settingBarView()
     }
     
-   //MARK: - XLPagerTabStrip delegate
-   func createViewControllers(feeds:[Dictionary<String, String>])->[UIViewController]{
+    //MARK: - XLPagerTabStrip delegate
+    func createViewControllers(feeds:[Dictionary<String, String>])->[UIViewController]{
         KRProgressHUD.show()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let apiVc = APIController()
+        let json = apiVc.getJSON(url: "http://rss")
         let parseVc = ParseJsonController()
-        let contents = parseVc.parseJson(feeds: feeds)
-    
+        let contents = parseVc.parseJson(json: json!)
+        
         let childsVcArray = feeds.enumerated().map{index,element -> ChildViewController in
             let childVc = storyboard.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
-            childVc.setInitNewsContent(number: index, newsContent: contents[index])
+            childVc.setInitNewsContent(number: index, newsContent: contents)
             return childVc
         }
-    
+        
         return childsVcArray
     }
     

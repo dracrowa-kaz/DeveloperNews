@@ -12,15 +12,17 @@ import Alamofire_Synchronous
 import SwiftyJSON
 
 class APIController {
+    
     func getJSON(url:String)->JSON?{
         let response = Alamofire.request(url, method: .get).responseJSON(options: .allowFragments)
         if let json = response.result.value {
-            return JSON(json)
+            //return JSON(json)
         }
         
-        return nil
+        return JSON(feedJson)
     }
 }
+
 
 var feeds: [Dictionary<String, String>] =
     [

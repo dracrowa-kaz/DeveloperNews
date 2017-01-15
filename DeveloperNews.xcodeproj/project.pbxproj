@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		09F3FD6A8CB46F56093E3D05 /* Pods_DeveloperNewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AA324E739CA6EEC6C64E56 /* Pods_DeveloperNewsTests.framework */; };
 		6E874DD91E1D479D00E8B388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E874DD81E1D479D00E8B388 /* AppDelegate.swift */; };
-		6E874DDB1E1D479D00E8B388 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E874DDA1E1D479D00E8B388 /* MainViewController.swift */; };
 		6E874DDE1E1D479D00E8B388 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E874DDC1E1D479D00E8B388 /* Main.storyboard */; };
 		6E874DE01E1D479D00E8B388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E874DDF1E1D479D00E8B388 /* Assets.xcassets */; };
 		6E874DE31E1D479D00E8B388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E874DE11E1D479D00E8B388 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,8 @@
 		6EA504401E1E911E008A0854 /* ParseJsonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5043F1E1E911E008A0854 /* ParseJsonController.swift */; };
 		6EC9AB471E2128820035A3CB /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC9AB461E2128820035A3CB /* ChildViewController.swift */; };
 		6EC9AB491E212EA00035A3CB /* CustomContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC9AB481E212EA00035A3CB /* CustomContentView.xib */; };
+		6EF1537F1E2B7E230087BDA4 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1537E1E2B7E230087BDA4 /* MainTabViewController.swift */; };
+		6EF153811E2B82D70087BDA4 /* MainButtonBarPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF153801E2B82D70087BDA4 /* MainButtonBarPagerViewController.swift */; };
 		CB57D370EC9DD4E1A09F90A7 /* Pods_DeveloperNewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23AF4B7A9CB1A3AEB0DF30 /* Pods_DeveloperNewsUITests.framework */; };
 		EEBDDA1EFF5EF2DCABE8359E /* Pods_DeveloperNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC0F19A079BEF2E68EE66C0 /* Pods_DeveloperNews.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +48,6 @@
 		620CFE996045DB30B5A7F55D /* Pods-DeveloperNewsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeveloperNewsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeveloperNewsUITests/Pods-DeveloperNewsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6E874DD51E1D479D00E8B388 /* DeveloperNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeveloperNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E874DD81E1D479D00E8B388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E874DDA1E1D479D00E8B388 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6E874DDD1E1D479D00E8B388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E874DDF1E1D479D00E8B388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E874DE21E1D479D00E8B388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +62,8 @@
 		6EA5043F1E1E911E008A0854 /* ParseJsonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseJsonController.swift; sourceTree = "<group>"; };
 		6EC9AB461E2128820035A3CB /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		6EC9AB481E212EA00035A3CB /* CustomContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomContentView.xib; sourceTree = "<group>"; };
+		6EF1537E1E2B7E230087BDA4 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		6EF153801E2B82D70087BDA4 /* MainButtonBarPagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainButtonBarPagerViewController.swift; sourceTree = "<group>"; };
 		7D23AF4B7A9CB1A3AEB0DF30 /* Pods_DeveloperNewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeveloperNewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B833FFB9A92211E669F635 /* Pods-DeveloperNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeveloperNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeveloperNews/Pods-DeveloperNews.debug.xcconfig"; sourceTree = "<group>"; };
 		AAC0F19A079BEF2E68EE66C0 /* Pods_DeveloperNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeveloperNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				6E874DD81E1D479D00E8B388 /* AppDelegate.swift */,
-				6E874DDA1E1D479D00E8B388 /* MainViewController.swift */,
+				6EF1537E1E2B7E230087BDA4 /* MainTabViewController.swift */,
+				6EF153801E2B82D70087BDA4 /* MainButtonBarPagerViewController.swift */,
 				6EC9AB461E2128820035A3CB /* ChildViewController.swift */,
 				6EA5043D1E1E90EE008A0854 /* APIController.swift */,
 				6EA5043F1E1E911E008A0854 /* ParseJsonController.swift */,
@@ -460,11 +463,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E874DDB1E1D479D00E8B388 /* MainViewController.swift in Sources */,
+				6EF1537F1E2B7E230087BDA4 /* MainTabViewController.swift in Sources */,
 				6EC9AB471E2128820035A3CB /* ChildViewController.swift in Sources */,
 				6EA504401E1E911E008A0854 /* ParseJsonController.swift in Sources */,
 				6E874DD91E1D479D00E8B388 /* AppDelegate.swift in Sources */,
 				6EA5043E1E1E90EE008A0854 /* APIController.swift in Sources */,
+				6EF153811E2B82D70087BDA4 /* MainButtonBarPagerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
