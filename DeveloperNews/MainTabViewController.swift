@@ -20,11 +20,11 @@ class MainTabViewController: UITabBarController {
         let firstView = storyboard.instantiateViewController(withIdentifier: "MainButtonBarPagerViewController") as! MainButtonBarPagerViewController
         let secondView = UIViewController()
         
-        firstView.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.featured, tag: 1)
-        secondView.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.bookmarks, tag: 2)
+        firstView.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.bookmarks, tag: 1)
+        secondView.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.favorites, tag: 2)
         
         let myTabs = NSArray(objects: firstView, secondView)
-        self.setViewControllers(myTabs as! [UIViewController], animated: false)
+        self.setViewControllers(myTabs as? [UIViewController], animated: false)
     }
 
     override func didReceiveMemoryWarning() {
