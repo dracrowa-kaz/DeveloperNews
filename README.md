@@ -1,3 +1,2 @@
 # DeveloperNews
 "test"
-"test"
